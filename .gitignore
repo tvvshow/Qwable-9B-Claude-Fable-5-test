@@ -1,0 +1,24 @@
+# Large model weights & adapters — download separately, do not commit
+model/
+checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Per-run logs (keep the dir via .gitkeep, ignore noisy run logs)
+logs/*.log
+logs/*.json
+!logs/.gitkeep
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Jupyter
+.ipynb_checkpoints/

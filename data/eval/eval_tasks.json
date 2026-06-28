@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "synthetic_18",
+    "description": "Create a Python function `is_palindrome(s)` that checks if a string is a palindrome. Ignore case and spaces. (variant 18)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import is_palindrome; assert is_palindrome('Race car'); assert not is_palindrome('hello'); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "easy",
+    "max_steps": 5
+  },
+  {
+    "id": "synthetic_100",
+    "description": "Create a function `regex_match(pattern, text)` that implements basic regex matching. Support: '.' (any char), '*' (zero or more of previous), '+' (one or more of previous). (variant 100)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import regex_match; assert regex_match('a*b', 'b'); assert regex_match('a.*b', 'axxb'); assert not regex_match('a+b', 'b'); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_161",
+    "description": "Create a Python function `is_palindrome(s)` that checks if a string is a palindrome. Ignore case and spaces. (variant 161)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import is_palindrome; assert is_palindrome('Race car'); assert not is_palindrome('hello'); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "easy",
+    "max_steps": 5
+  },
+  {
+    "id": "synthetic_125",
+    "description": "Create a `config_parser.py` module that reads INI-style config files. Support sections [section], key=value pairs, and comments (#). Include proper error handling for malformed configs. (variant 125)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from config_parser import ConfigParser; cp=ConfigParser(); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 12
+  },
+  {
+    "id": "synthetic_155",
+    "description": "Create a `rate_limiter.py` implementing a token bucket rate limiter. Class with: __init__(rate, capacity), allow() -> bool. The limiter should allow `rate` requests per second with burst up to `capacity`. (variant 155)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from rate_limiter import RateLimiter; rl=RateLimiter(2,2); assert rl.allow(); assert rl.allow(); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_134",
+    "description": "Create a function `binary_search(arr, target)` that performs binary search on a sorted array. Return the index of target, or -1 if not found. (variant 134)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import binary_search; assert binary_search([1,3,5,7,9],5)==2; assert binary_search([1,3,5,7,9],4)==-1; assert binary_search([],1)==-1; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 8
+  },
+  {
+    "id": "synthetic_156",
+    "description": "Create a function `binary_search(arr, target)` that performs binary search on a sorted array. Return the index of target, or -1 if not found. (variant 156)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import binary_search; assert binary_search([1,3,5,7,9],5)==2; assert binary_search([1,3,5,7,9],4)==-1; assert binary_search([],1)==-1; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 8
+  },
+  {
+    "id": "synthetic_106",
+    "description": "Create a `linked_list.py` with a LinkedList class supporting: append, prepend, delete(value), find(value), to_list(). Also create `test_linked_list.py` with tests. (variant 106)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -m pytest test_linked_list.py -v --tb=short 2>&1",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 12
+  },
+  {
+    "id": "synthetic_53",
+    "description": "Create a function `binary_search(arr, target)` that performs binary search on a sorted array. Return the index of target, or -1 if not found. (variant 53)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import binary_search; assert binary_search([1,3,5,7,9],5)==2; assert binary_search([1,3,5,7,9],4)==-1; assert binary_search([],1)==-1; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 8
+  },
+  {
+    "id": "synthetic_162",
+    "description": "Create a simple REST API calculator module. Create `calculator.py` with add, subtract, multiply, divide functions (divide should handle ZeroDivisionError). Create `test_calculator.py` with pytest tests. (variant 162)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -m pytest test_calculator.py -v --tb=short 2>&1",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 12
+  },
+  {
+    "id": "synthetic_33",
+    "description": "Create a simple REST API calculator module. Create `calculator.py` with add, subtract, multiply, divide functions (divide should handle ZeroDivisionError). Create `test_calculator.py` with pytest tests. (variant 33)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -m pytest test_calculator.py -v --tb=short 2>&1",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 12
+  },
+  {
+    "id": "synthetic_118",
+    "description": "Create a `task_queue.py` implementing a priority queue with: push(item, priority), pop() -> (item, priority), peek(), is_empty(). Lower priority number = higher priority. (variant 118)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from task_queue import PriorityQueue; pq=PriorityQueue(); pq.push('a',2); pq.push('b',1); assert pq.pop()==('b',1); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 10
+  },
+  {
+    "id": "synthetic_88",
+    "description": "Create a function `lru_cache_decorator(max_size)` that implements an LRU cache decorator. When cache is full, evict the least recently used item. (variant 88)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import lru_cache_decorator; @lru_cache_decorator(2)\ndef f(x): return x*2\nf(1); f(2); f(3); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_39",
+    "description": "Create a function `fibonacci(n)` that returns the nth Fibonacci number. Use memoization for efficiency. Handle n=0 returning 0, n=1 returning 1. (variant 39)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import fibonacci; assert fibonacci(0)==0; assert fibonacci(1)==1; assert fibonacci(10)==55; assert fibonacci(50)==12586269025; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 8
+  },
+  {
+    "id": "synthetic_97",
+    "description": "Create a Python class `Stack` with methods: push(item), pop(), peek(), is_empty(), size(). Raise IndexError on pop/peek of empty stack. (variant 97)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import Stack; s=Stack(); s.push(1); s.push(2); assert s.pop()==2; assert s.peek()==1; assert s.size()==1; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "easy",
+    "max_steps": 8
+  },
+  {
+    "id": "synthetic_25",
+    "description": "Create a Python class `Stack` with methods: push(item), pop(), peek(), is_empty(), size(). Raise IndexError on pop/peek of empty stack. (variant 25)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import Stack; s=Stack(); s.push(1); s.push(2); assert s.pop()==2; assert s.peek()==1; assert s.size()==1; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "easy",
+    "max_steps": 8
+  },
+  {
+    "id": "synthetic_162",
+    "description": "Create a `rate_limiter.py` implementing a token bucket rate limiter. Class with: __init__(rate, capacity), allow() -> bool. The limiter should allow `rate` requests per second with burst up to `capacity`. (variant 162)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from rate_limiter import RateLimiter; rl=RateLimiter(2,2); assert rl.allow(); assert rl.allow(); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_164",
+    "description": "Create a Python class `Stack` with methods: push(item), pop(), peek(), is_empty(), size(). Raise IndexError on pop/peek of empty stack. (variant 164)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import Stack; s=Stack(); s.push(1); s.push(2); assert s.pop()==2; assert s.peek()==1; assert s.size()==1; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "easy",
+    "max_steps": 8
+  },
+  {
+    "id": "synthetic_113",
+    "description": "Create a Python function `is_palindrome(s)` that checks if a string is a palindrome. Ignore case and spaces. (variant 113)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import is_palindrome; assert is_palindrome('Race car'); assert not is_palindrome('hello'); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "easy",
+    "max_steps": 5
+  },
+  {
+    "id": "synthetic_127",
+    "description": "Create a function `regex_match(pattern, text)` that implements basic regex matching. Support: '.' (any char), '*' (zero or more of previous), '+' (one or more of previous). (variant 127)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import regex_match; assert regex_match('a*b', 'b'); assert regex_match('a.*b', 'axxb'); assert not regex_match('a+b', 'b'); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_125",
+    "description": "Create a function `regex_match(pattern, text)` that implements basic regex matching. Support: '.' (any char), '*' (zero or more of previous), '+' (one or more of previous). (variant 125)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import regex_match; assert regex_match('a*b', 'b'); assert regex_match('a.*b', 'axxb'); assert not regex_match('a+b', 'b'); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_192",
+    "description": "Create a `linked_list.py` with a LinkedList class supporting: append, prepend, delete(value), find(value), to_list(). Also create `test_linked_list.py` with tests. (variant 192)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -m pytest test_linked_list.py -v --tb=short 2>&1",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 12
+  },
+  {
+    "id": "synthetic_9",
+    "description": "Create a function `regex_match(pattern, text)` that implements basic regex matching. Support: '.' (any char), '*' (zero or more of previous), '+' (one or more of previous).",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import regex_match; assert regex_match('a*b', 'b'); assert regex_match('a.*b', 'axxb'); assert not regex_match('a+b', 'b'); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_19",
+    "description": "Create a function `lru_cache_decorator(max_size)` that implements an LRU cache decorator. When cache is full, evict the least recently used item. (variant 19)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import lru_cache_decorator; @lru_cache_decorator(2)\ndef f(x): return x*2\nf(1); f(2); f(3); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_15",
+    "description": "Create a function `fibonacci(n)` that returns the nth Fibonacci number. Use memoization for efficiency. Handle n=0 returning 0, n=1 returning 1. (variant 15)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import fibonacci; assert fibonacci(0)==0; assert fibonacci(1)==1; assert fibonacci(10)==55; assert fibonacci(50)==12586269025; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 8
+  },
+  {
+    "id": "synthetic_146",
+    "description": "Create a function `merge_sort(arr)` that sorts a list using merge sort algorithm. Return a new sorted list without modifying the input. (variant 146)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import merge_sort; assert merge_sort([3,1,4,1,5,9])==[1,1,3,4,5,9]; assert merge_sort([])==[]; assert merge_sort([1])==[1]; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 10
+  },
+  {
+    "id": "synthetic_35",
+    "description": "Create a function `lru_cache_decorator(max_size)` that implements an LRU cache decorator. When cache is full, evict the least recently used item. (variant 35)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import lru_cache_decorator; @lru_cache_decorator(2)\ndef f(x): return x*2\nf(1); f(2); f(3); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_174",
+    "description": "Create a function `regex_match(pattern, text)` that implements basic regex matching. Support: '.' (any char), '*' (zero or more of previous), '+' (one or more of previous). (variant 174)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import regex_match; assert regex_match('a*b', 'b'); assert regex_match('a.*b', 'axxb'); assert not regex_match('a+b', 'b'); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_57",
+    "description": "Create a function `lru_cache_decorator(max_size)` that implements an LRU cache decorator. When cache is full, evict the least recently used item. (variant 57)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import lru_cache_decorator; @lru_cache_decorator(2)\ndef f(x): return x*2\nf(1); f(2); f(3); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_13",
+    "description": "Create a `rate_limiter.py` implementing a token bucket rate limiter. Class with: __init__(rate, capacity), allow() -> bool. The limiter should allow `rate` requests per second with burst up to `capacity`.",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from rate_limiter import RateLimiter; rl=RateLimiter(2,2); assert rl.allow(); assert rl.allow(); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_24",
+    "description": "Create a function `fibonacci(n)` that returns the nth Fibonacci number. Use memoization for efficiency. Handle n=0 returning 0, n=1 returning 1. (variant 24)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import fibonacci; assert fibonacci(0)==0; assert fibonacci(1)==1; assert fibonacci(10)==55; assert fibonacci(50)==12586269025; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 8
+  },
+  {
+    "id": "synthetic_126",
+    "description": "Create a simple REST API calculator module. Create `calculator.py` with add, subtract, multiply, divide functions (divide should handle ZeroDivisionError). Create `test_calculator.py` with pytest tests. (variant 126)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -m pytest test_calculator.py -v --tb=short 2>&1",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 12
+  },
+  {
+    "id": "synthetic_52",
+    "description": "Create a Python function `add(a, b)` that returns the sum of two numbers. Handle both integers and floats. Include type checking. (variant 52)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import add; assert add(1,2)==3; assert add(1.5,2.5)==4.0; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "easy",
+    "max_steps": 5
+  },
+  {
+    "id": "synthetic_111",
+    "description": "Create a Python function `is_palindrome(s)` that checks if a string is a palindrome. Ignore case and spaces. (variant 111)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import is_palindrome; assert is_palindrome('Race car'); assert not is_palindrome('hello'); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "easy",
+    "max_steps": 5
+  },
+  {
+    "id": "synthetic_176",
+    "description": "Create a simple REST API calculator module. Create `calculator.py` with add, subtract, multiply, divide functions (divide should handle ZeroDivisionError). Create `test_calculator.py` with pytest tests. (variant 176)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -m pytest test_calculator.py -v --tb=short 2>&1",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 12
+  },
+  {
+    "id": "synthetic_78",
+    "description": "Create a `task_queue.py` implementing a priority queue with: push(item, priority), pop() -> (item, priority), peek(), is_empty(). Lower priority number = higher priority. (variant 78)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from task_queue import PriorityQueue; pq=PriorityQueue(); pq.push('a',2); pq.push('b',1); assert pq.pop()==('b',1); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 10
+  },
+  {
+    "id": "synthetic_14",
+    "description": "Create a `task_queue.py` implementing a priority queue with: push(item, priority), pop() -> (item, priority), peek(), is_empty(). Lower priority number = higher priority.",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from task_queue import PriorityQueue; pq=PriorityQueue(); pq.push('a',2); pq.push('b',1); assert pq.pop()==('b',1); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 10
+  },
+  {
+    "id": "synthetic_8",
+    "description": "Create a Python class `LRUCache` with get(key) and put(key, value) methods. Both operations must be O(1) time complexity. Evict LRU item when capacity exceeded.",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import LRUCache; c=LRUCache(2); c.put(1,1); c.put(2,2); assert c.get(1)==1; c.put(3,3); assert c.get(2)==-1; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_51",
+    "description": "Create a function `regex_match(pattern, text)` that implements basic regex matching. Support: '.' (any char), '*' (zero or more of previous), '+' (one or more of previous). (variant 51)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import regex_match; assert regex_match('a*b', 'b'); assert regex_match('a.*b', 'axxb'); assert not regex_match('a+b', 'b'); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_54",
+    "description": "Create a Python class `LRUCache` with get(key) and put(key, value) methods. Both operations must be O(1) time complexity. Evict LRU item when capacity exceeded. (variant 54)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import LRUCache; c=LRUCache(2); c.put(1,1); c.put(2,2); assert c.get(1)==1; c.put(3,3); assert c.get(2)==-1; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_5",
+    "description": "Create a function `merge_sort(arr)` that sorts a list using merge sort algorithm. Return a new sorted list without modifying the input.",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import merge_sort; assert merge_sort([3,1,4,1,5,9])==[1,1,3,4,5,9]; assert merge_sort([])==[]; assert merge_sort([1])==[1]; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 10
+  },
+  {
+    "id": "synthetic_129",
+    "description": "Create a function `flatten(nested_list)` that flattens a nested list of arbitrary depth. Example: flatten([1,[2,[3,4],5]]) -> [1,2,3,4,5] (variant 129)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import flatten; assert flatten([1,[2,[3,4],5]])==[1,2,3,4,5]; assert flatten([])==[]; assert flatten([[[1]]])==[1]; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 8
+  },
+  {
+    "id": "synthetic_129",
+    "description": "Create a Python class `LRUCache` with get(key) and put(key, value) methods. Both operations must be O(1) time complexity. Evict LRU item when capacity exceeded. (variant 129)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import LRUCache; c=LRUCache(2); c.put(1,1); c.put(2,2); assert c.get(1)==1; c.put(3,3); assert c.get(2)==-1; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_92",
+    "description": "Create a function `merge_sort(arr)` that sorts a list using merge sort algorithm. Return a new sorted list without modifying the input. (variant 92)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import merge_sort; assert merge_sort([3,1,4,1,5,9])==[1,1,3,4,5,9]; assert merge_sort([])==[]; assert merge_sort([1])==[1]; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 10
+  },
+  {
+    "id": "synthetic_131",
+    "description": "Create a `linked_list.py` with a LinkedList class supporting: append, prepend, delete(value), find(value), to_list(). Also create `test_linked_list.py` with tests. (variant 131)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -m pytest test_linked_list.py -v --tb=short 2>&1",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 12
+  },
+  {
+    "id": "synthetic_110",
+    "description": "Create a function `lru_cache_decorator(max_size)` that implements an LRU cache decorator. When cache is full, evict the least recently used item. (variant 110)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import lru_cache_decorator; @lru_cache_decorator(2)\ndef f(x): return x*2\nf(1); f(2); f(3); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_7",
+    "description": "Create a function `lru_cache_decorator(max_size)` that implements an LRU cache decorator. When cache is full, evict the least recently used item.",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import lru_cache_decorator; @lru_cache_decorator(2)\ndef f(x): return x*2\nf(1); f(2); f(3); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_77",
+    "description": "Create a function `merge_sort(arr)` that sorts a list using merge sort algorithm. Return a new sorted list without modifying the input. (variant 77)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import merge_sort; assert merge_sort([3,1,4,1,5,9])==[1,1,3,4,5,9]; assert merge_sort([])==[]; assert merge_sort([1])==[1]; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 10
+  },
+  {
+    "id": "synthetic_182",
+    "description": "Create a Python class `Stack` with methods: push(item), pop(), peek(), is_empty(), size(). Raise IndexError on pop/peek of empty stack. (variant 182)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import Stack; s=Stack(); s.push(1); s.push(2); assert s.pop()==2; assert s.peek()==1; assert s.size()==1; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "easy",
+    "max_steps": 8
+  },
+  {
+    "id": "synthetic_56",
+    "description": "Create a function `binary_search(arr, target)` that performs binary search on a sorted array. Return the index of target, or -1 if not found. (variant 56)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import binary_search; assert binary_search([1,3,5,7,9],5)==2; assert binary_search([1,3,5,7,9],4)==-1; assert binary_search([],1)==-1; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 8
+  },
+  {
+    "id": "synthetic_144",
+    "description": "Create a function `lru_cache_decorator(max_size)` that implements an LRU cache decorator. When cache is full, evict the least recently used item. (variant 144)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import lru_cache_decorator; @lru_cache_decorator(2)\ndef f(x): return x*2\nf(1); f(2); f(3); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_187",
+    "description": "Create a Python function `is_palindrome(s)` that checks if a string is a palindrome. Ignore case and spaces. (variant 187)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import is_palindrome; assert is_palindrome('Race car'); assert not is_palindrome('hello'); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "easy",
+    "max_steps": 5
+  },
+  {
+    "id": "synthetic_77",
+    "description": "Create a Python function `add(a, b)` that returns the sum of two numbers. Handle both integers and floats. Include type checking. (variant 77)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import add; assert add(1,2)==3; assert add(1.5,2.5)==4.0; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "easy",
+    "max_steps": 5
+  },
+  {
+    "id": "synthetic_83",
+    "description": "Create a `config_parser.py` module that reads INI-style config files. Support sections [section], key=value pairs, and comments (#). Include proper error handling for malformed configs. (variant 83)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from config_parser import ConfigParser; cp=ConfigParser(); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 12
+  },
+  {
+    "id": "synthetic_9",
+    "description": "Create a function `regex_match(pattern, text)` that implements basic regex matching. Support: '.' (any char), '*' (zero or more of previous), '+' (one or more of previous).",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import regex_match; assert regex_match('a*b', 'b'); assert regex_match('a.*b', 'axxb'); assert not regex_match('a+b', 'b'); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_35",
+    "description": "Create a `linked_list.py` with a LinkedList class supporting: append, prepend, delete(value), find(value), to_list(). Also create `test_linked_list.py` with tests. (variant 35)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -m pytest test_linked_list.py -v --tb=short 2>&1",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 12
+  },
+  {
+    "id": "synthetic_150",
+    "description": "Create a `config_parser.py` module that reads INI-style config files. Support sections [section], key=value pairs, and comments (#). Include proper error handling for malformed configs. (variant 150)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from config_parser import ConfigParser; cp=ConfigParser(); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 12
+  },
+  {
+    "id": "synthetic_6",
+    "description": "Create a function `flatten(nested_list)` that flattens a nested list of arbitrary depth. Example: flatten([1,[2,[3,4],5]]) -> [1,2,3,4,5]",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import flatten; assert flatten([1,[2,[3,4],5]])==[1,2,3,4,5]; assert flatten([])==[]; assert flatten([[[1]]])==[1]; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 8
+  },
+  {
+    "id": "synthetic_123",
+    "description": "Create a Python function `add(a, b)` that returns the sum of two numbers. Handle both integers and floats. Include type checking. (variant 123)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import add; assert add(1,2)==3; assert add(1.5,2.5)==4.0; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "easy",
+    "max_steps": 5
+  },
+  {
+    "id": "synthetic_145",
+    "description": "Create a Python function `is_palindrome(s)` that checks if a string is a palindrome. Ignore case and spaces. (variant 145)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import is_palindrome; assert is_palindrome('Race car'); assert not is_palindrome('hello'); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "easy",
+    "max_steps": 5
+  },
+  {
+    "id": "synthetic_119",
+    "description": "Create a Python function `is_palindrome(s)` that checks if a string is a palindrome. Ignore case and spaces. (variant 119)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import is_palindrome; assert is_palindrome('Race car'); assert not is_palindrome('hello'); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "easy",
+    "max_steps": 5
+  },
+  {
+    "id": "synthetic_121",
+    "description": "Create a Python class `Stack` with methods: push(item), pop(), peek(), is_empty(), size(). Raise IndexError on pop/peek of empty stack. (variant 121)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import Stack; s=Stack(); s.push(1); s.push(2); assert s.pop()==2; assert s.peek()==1; assert s.size()==1; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "easy",
+    "max_steps": 8
+  },
+  {
+    "id": "synthetic_144",
+    "description": "Create a Python function `add(a, b)` that returns the sum of two numbers. Handle both integers and floats. Include type checking. (variant 144)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import add; assert add(1,2)==3; assert add(1.5,2.5)==4.0; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "easy",
+    "max_steps": 5
+  },
+  {
+    "id": "synthetic_67",
+    "description": "Create a function `merge_sort(arr)` that sorts a list using merge sort algorithm. Return a new sorted list without modifying the input. (variant 67)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import merge_sort; assert merge_sort([3,1,4,1,5,9])==[1,1,3,4,5,9]; assert merge_sort([])==[]; assert merge_sort([1])==[1]; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 10
+  },
+  {
+    "id": "synthetic_30",
+    "description": "Create a `task_queue.py` implementing a priority queue with: push(item, priority), pop() -> (item, priority), peek(), is_empty(). Lower priority number = higher priority. (variant 30)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from task_queue import PriorityQueue; pq=PriorityQueue(); pq.push('a',2); pq.push('b',1); assert pq.pop()==('b',1); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 10
+  },
+  {
+    "id": "synthetic_136",
+    "description": "Create a Python function `add(a, b)` that returns the sum of two numbers. Handle both integers and floats. Include type checking. (variant 136)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import add; assert add(1,2)==3; assert add(1.5,2.5)==4.0; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "easy",
+    "max_steps": 5
+  },
+  {
+    "id": "synthetic_5",
+    "description": "Create a function `merge_sort(arr)` that sorts a list using merge sort algorithm. Return a new sorted list without modifying the input.",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import merge_sort; assert merge_sort([3,1,4,1,5,9])==[1,1,3,4,5,9]; assert merge_sort([])==[]; assert merge_sort([1])==[1]; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 10
+  },
+  {
+    "id": "synthetic_76",
+    "description": "Create a simple REST API calculator module. Create `calculator.py` with add, subtract, multiply, divide functions (divide should handle ZeroDivisionError). Create `test_calculator.py` with pytest tests. (variant 76)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -m pytest test_calculator.py -v --tb=short 2>&1",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 12
+  },
+  {
+    "id": "synthetic_90",
+    "description": "Create a `task_queue.py` implementing a priority queue with: push(item, priority), pop() -> (item, priority), peek(), is_empty(). Lower priority number = higher priority. (variant 90)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from task_queue import PriorityQueue; pq=PriorityQueue(); pq.push('a',2); pq.push('b',1); assert pq.pop()==('b',1); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 10
+  },
+  {
+    "id": "synthetic_113",
+    "description": "Create a `linked_list.py` with a LinkedList class supporting: append, prepend, delete(value), find(value), to_list(). Also create `test_linked_list.py` with tests. (variant 113)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -m pytest test_linked_list.py -v --tb=short 2>&1",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 12
+  },
+  {
+    "id": "synthetic_43",
+    "description": "Create a function `fibonacci(n)` that returns the nth Fibonacci number. Use memoization for efficiency. Handle n=0 returning 0, n=1 returning 1. (variant 43)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import fibonacci; assert fibonacci(0)==0; assert fibonacci(1)==1; assert fibonacci(10)==55; assert fibonacci(50)==12586269025; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 8
+  },
+  {
+    "id": "synthetic_101",
+    "description": "Create a function `binary_search(arr, target)` that performs binary search on a sorted array. Return the index of target, or -1 if not found. (variant 101)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import binary_search; assert binary_search([1,3,5,7,9],5)==2; assert binary_search([1,3,5,7,9],4)==-1; assert binary_search([],1)==-1; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 8
+  },
+  {
+    "id": "synthetic_100",
+    "description": "Create a `task_queue.py` implementing a priority queue with: push(item, priority), pop() -> (item, priority), peek(), is_empty(). Lower priority number = higher priority. (variant 100)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from task_queue import PriorityQueue; pq=PriorityQueue(); pq.push('a',2); pq.push('b',1); assert pq.pop()==('b',1); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 10
+  },
+  {
+    "id": "synthetic_186",
+    "description": "Create a `config_parser.py` module that reads INI-style config files. Support sections [section], key=value pairs, and comments (#). Include proper error handling for malformed configs. (variant 186)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from config_parser import ConfigParser; cp=ConfigParser(); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 12
+  },
+  {
+    "id": "synthetic_10",
+    "description": "Create a simple REST API calculator module. Create `calculator.py` with add, subtract, multiply, divide functions (divide should handle ZeroDivisionError). Create `test_calculator.py` with pytest tests.",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -m pytest test_calculator.py -v --tb=short 2>&1",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 12
+  },
+  {
+    "id": "synthetic_96",
+    "description": "Create a function `lru_cache_decorator(max_size)` that implements an LRU cache decorator. When cache is full, evict the least recently used item. (variant 96)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import lru_cache_decorator; @lru_cache_decorator(2)\ndef f(x): return x*2\nf(1); f(2); f(3); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_50",
+    "description": "Create a function `flatten(nested_list)` that flattens a nested list of arbitrary depth. Example: flatten([1,[2,[3,4],5]]) -> [1,2,3,4,5] (variant 50)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import flatten; assert flatten([1,[2,[3,4],5]])==[1,2,3,4,5]; assert flatten([])==[]; assert flatten([[[1]]])==[1]; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 8
+  },
+  {
+    "id": "synthetic_128",
+    "description": "Create a Python function `add(a, b)` that returns the sum of two numbers. Handle both integers and floats. Include type checking. (variant 128)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import add; assert add(1,2)==3; assert add(1.5,2.5)==4.0; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "easy",
+    "max_steps": 5
+  },
+  {
+    "id": "synthetic_25",
+    "description": "Create a function `fibonacci(n)` that returns the nth Fibonacci number. Use memoization for efficiency. Handle n=0 returning 0, n=1 returning 1. (variant 25)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import fibonacci; assert fibonacci(0)==0; assert fibonacci(1)==1; assert fibonacci(10)==55; assert fibonacci(50)==12586269025; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 8
+  },
+  {
+    "id": "synthetic_86",
+    "description": "Create a function `flatten(nested_list)` that flattens a nested list of arbitrary depth. Example: flatten([1,[2,[3,4],5]]) -> [1,2,3,4,5] (variant 86)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import flatten; assert flatten([1,[2,[3,4],5]])==[1,2,3,4,5]; assert flatten([])==[]; assert flatten([[[1]]])==[1]; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 8
+  },
+  {
+    "id": "synthetic_82",
+    "description": "Create a `task_queue.py` implementing a priority queue with: push(item, priority), pop() -> (item, priority), peek(), is_empty(). Lower priority number = higher priority. (variant 82)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from task_queue import PriorityQueue; pq=PriorityQueue(); pq.push('a',2); pq.push('b',1); assert pq.pop()==('b',1); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 10
+  },
+  {
+    "id": "synthetic_189",
+    "description": "Create a function `flatten(nested_list)` that flattens a nested list of arbitrary depth. Example: flatten([1,[2,[3,4],5]]) -> [1,2,3,4,5] (variant 189)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import flatten; assert flatten([1,[2,[3,4],5]])==[1,2,3,4,5]; assert flatten([])==[]; assert flatten([[[1]]])==[1]; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 8
+  },
+  {
+    "id": "synthetic_102",
+    "description": "Create a Python class `LRUCache` with get(key) and put(key, value) methods. Both operations must be O(1) time complexity. Evict LRU item when capacity exceeded. (variant 102)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import LRUCache; c=LRUCache(2); c.put(1,1); c.put(2,2); assert c.get(1)==1; c.put(3,3); assert c.get(2)==-1; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_150",
+    "description": "Create a `rate_limiter.py` implementing a token bucket rate limiter. Class with: __init__(rate, capacity), allow() -> bool. The limiter should allow `rate` requests per second with burst up to `capacity`. (variant 150)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from rate_limiter import RateLimiter; rl=RateLimiter(2,2); assert rl.allow(); assert rl.allow(); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_185",
+    "description": "Create a function `regex_match(pattern, text)` that implements basic regex matching. Support: '.' (any char), '*' (zero or more of previous), '+' (one or more of previous). (variant 185)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import regex_match; assert regex_match('a*b', 'b'); assert regex_match('a.*b', 'axxb'); assert not regex_match('a+b', 'b'); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_181",
+    "description": "Create a `rate_limiter.py` implementing a token bucket rate limiter. Class with: __init__(rate, capacity), allow() -> bool. The limiter should allow `rate` requests per second with burst up to `capacity`. (variant 181)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from rate_limiter import RateLimiter; rl=RateLimiter(2,2); assert rl.allow(); assert rl.allow(); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_149",
+    "description": "Create a `rate_limiter.py` implementing a token bucket rate limiter. Class with: __init__(rate, capacity), allow() -> bool. The limiter should allow `rate` requests per second with burst up to `capacity`. (variant 149)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from rate_limiter import RateLimiter; rl=RateLimiter(2,2); assert rl.allow(); assert rl.allow(); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_154",
+    "description": "Create a `config_parser.py` module that reads INI-style config files. Support sections [section], key=value pairs, and comments (#). Include proper error handling for malformed configs. (variant 154)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from config_parser import ConfigParser; cp=ConfigParser(); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 12
+  },
+  {
+    "id": "synthetic_18",
+    "description": "Create a function `regex_match(pattern, text)` that implements basic regex matching. Support: '.' (any char), '*' (zero or more of previous), '+' (one or more of previous). (variant 18)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import regex_match; assert regex_match('a*b', 'b'); assert regex_match('a.*b', 'axxb'); assert not regex_match('a+b', 'b'); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_34",
+    "description": "Create a `rate_limiter.py` implementing a token bucket rate limiter. Class with: __init__(rate, capacity), allow() -> bool. The limiter should allow `rate` requests per second with burst up to `capacity`. (variant 34)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from rate_limiter import RateLimiter; rl=RateLimiter(2,2); assert rl.allow(); assert rl.allow(); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_108",
+    "description": "Create a `rate_limiter.py` implementing a token bucket rate limiter. Class with: __init__(rate, capacity), allow() -> bool. The limiter should allow `rate` requests per second with burst up to `capacity`. (variant 108)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from rate_limiter import RateLimiter; rl=RateLimiter(2,2); assert rl.allow(); assert rl.allow(); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_104",
+    "description": "Create a function `regex_match(pattern, text)` that implements basic regex matching. Support: '.' (any char), '*' (zero or more of previous), '+' (one or more of previous). (variant 104)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import regex_match; assert regex_match('a*b', 'b'); assert regex_match('a.*b', 'axxb'); assert not regex_match('a+b', 'b'); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_68",
+    "description": "Create a `config_parser.py` module that reads INI-style config files. Support sections [section], key=value pairs, and comments (#). Include proper error handling for malformed configs. (variant 68)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from config_parser import ConfigParser; cp=ConfigParser(); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 12
+  },
+  {
+    "id": "synthetic_73",
+    "description": "Create a Python class `LRUCache` with get(key) and put(key, value) methods. Both operations must be O(1) time complexity. Evict LRU item when capacity exceeded. (variant 73)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import LRUCache; c=LRUCache(2); c.put(1,1); c.put(2,2); assert c.get(1)==1; c.put(3,3); assert c.get(2)==-1; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_56",
+    "description": "Create a `rate_limiter.py` implementing a token bucket rate limiter. Class with: __init__(rate, capacity), allow() -> bool. The limiter should allow `rate` requests per second with burst up to `capacity`. (variant 56)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from rate_limiter import RateLimiter; rl=RateLimiter(2,2); assert rl.allow(); assert rl.allow(); print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_84",
+    "description": "Create a simple REST API calculator module. Create `calculator.py` with add, subtract, multiply, divide functions (divide should handle ZeroDivisionError). Create `test_calculator.py` with pytest tests. (variant 84)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -m pytest test_calculator.py -v --tb=short 2>&1",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 12
+  },
+  {
+    "id": "synthetic_75",
+    "description": "Create a `linked_list.py` with a LinkedList class supporting: append, prepend, delete(value), find(value), to_list(). Also create `test_linked_list.py` with tests. (variant 75)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -m pytest test_linked_list.py -v --tb=short 2>&1",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 12
+  },
+  {
+    "id": "synthetic_110",
+    "description": "Create a `linked_list.py` with a LinkedList class supporting: append, prepend, delete(value), find(value), to_list(). Also create `test_linked_list.py` with tests. (variant 110)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -m pytest test_linked_list.py -v --tb=short 2>&1",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 12
+  },
+  {
+    "id": "synthetic_43",
+    "description": "Create a Python class `LRUCache` with get(key) and put(key, value) methods. Both operations must be O(1) time complexity. Evict LRU item when capacity exceeded. (variant 43)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import LRUCache; c=LRUCache(2); c.put(1,1); c.put(2,2); assert c.get(1)==1; c.put(3,3); assert c.get(2)==-1; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "hard",
+    "max_steps": 15
+  },
+  {
+    "id": "synthetic_62",
+    "description": "Create a function `flatten(nested_list)` that flattens a nested list of arbitrary depth. Example: flatten([1,[2,[3,4],5]]) -> [1,2,3,4,5] (variant 62)",
+    "context": "Empty project directory.",
+    "files": {},
+    "test_command": "python3 -c \"from solution import flatten; assert flatten([1,[2,[3,4],5]])==[1,2,3,4,5]; assert flatten([])==[]; assert flatten([[[1]]])==[1]; print('PASS')\"",
+    "test_files": [],
+    "difficulty": "medium",
+    "max_steps": 8
+  }
+]

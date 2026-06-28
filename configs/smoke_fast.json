@@ -1,0 +1,1 @@
+{"init_adapter": "/root/strata-project/checkpoints/sft", "N": 2, "M": 4, "sigma": 4, "max_steps": 2, "batch_size": 1, "max_interaction_steps": 6, "kappa": 0.1, "learning_rate": 2e-6, "kl_beta": 0.02, "max_response_tokens": 512}

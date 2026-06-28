@@ -1,0 +1,61 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+============================================================
+StraTA Quick Smoke Test (2 steps)
+============================================================
+Training tasks: 4
+Eval tasks: 2
+Config: N=2, M=2, sigma=2
+
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 14320.73it/s]
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading tokenizer...
+Loading model with QLoRA 4-bit...
+Loading weights:   0%|          | 0/427 [00:00<?, ?it/s]Loading weights:   0%|          | 1/427 [00:00<02:30,  2.84it/s]Loading weights:   0%|          | 2/427 [00:00<02:31,  2.81it/s]Loading weights:   4%|▎         | 15/427 [00:00<00:15, 26.40it/s]Loading weights:   9%|▉         | 38/427 [00:00<00:05, 68.54it/s]Loading weights:  12%|█▏        | 50/427 [00:01<00:04, 77.23it/s]Loading weights:  16%|█▌        | 68/427 [00:01<00:03, 100.44it/s]Loading weights:  21%|██▏       | 91/427 [00:01<00:02, 131.76it/s]Loading weights:  25%|██▌       | 108/427 [00:01<00:02, 126.30it/s]Loading weights:  30%|███       | 130/427 [00:01<00:02, 148.07it/s]Loading weights:  34%|███▍      | 147/427 [00:01<00:01, 151.03it/s]Loading weights:  38%|███▊      | 164/427 [00:01<00:01, 149.82it/s]Loading weights:  43%|████▎     | 182/427 [00:01<00:01, 157.14it/s]Loading weights:  47%|████▋     | 200/427 [00:01<00:01, 156.08it/s]Loading weights:  51%|█████     | 217/427 [00:02<00:01, 152.94it/s]Loading weights:  55%|█████▌    | 236/427 [00:02<00:01, 161.82it/s]Loading weights:  59%|█████▉    | 253/427 [00:02<00:01, 157.53it/s]Loading weights:  63%|██████▎   | 269/427 [00:02<00:01, 150.40it/s]Loading weights:  68%|██████▊   | 289/427 [00:02<00:00, 162.12it/s]Loading weights:  72%|███████▏  | 306/427 [00:02<00:00, 160.86it/s]Loading weights:  76%|███████▌  | 323/427 [00:02<00:00, 154.50it/s]Loading weights:  80%|███████▉  | 341/427 [00:02<00:00, 159.79it/s]Loading weights:  84%|████████▍ | 359/427 [00:02<00:00, 158.22it/s]Loading weights:  88%|████████▊ | 375/427 [00:03<00:00, 151.72it/s]Loading weights:  92%|█████████▏| 394/427 [00:03<00:00, 161.92it/s]Loading weights:  96%|█████████▋| 412/427 [00:03<00:00, 160.70it/s]Loading weights: 100%|██████████| 427/427 [00:03<00:00, 125.49it/s]
+trainable params: 116,391,936 || all params: 9,070,195,200 || trainable%: 1.2832
+Loading reference model...
+Loading weights:   0%|          | 0/427 [00:00<?, ?it/s]Loading weights:   0%|          | 1/427 [00:00<02:31,  2.81it/s]Loading weights:   0%|          | 2/427 [00:00<02:32,  2.79it/s]Loading weights:   5%|▌         | 23/427 [00:00<00:09, 41.97it/s]Loading weights:  10%|▉         | 41/427 [00:00<00:05, 69.06it/s]Loading weights:  12%|█▏        | 53/427 [00:01<00:04, 80.30it/s]Loading weights:  18%|█▊        | 76/427 [00:01<00:03, 113.63it/s]Loading weights:  22%|██▏       | 94/427 [00:01<00:02, 125.50it/s]Loading weights:  26%|██▌       | 110/427 [00:01<00:02, 126.74it/s]Loading weights:  30%|███       | 130/427 [00:01<00:02, 143.77it/s]Loading weights:  34%|███▍      | 147/427 [00:01<00:01, 147.74it/s]Loading weights:  38%|███▊      | 163/427 [00:01<00:01, 144.71it/s]Loading weights:  43%|████▎     | 182/427 [00:01<00:01, 155.79it/s]Loading weights:  47%|████▋     | 200/427 [00:01<00:01, 154.49it/s]Loading weights:  51%|█████     | 216/427 [00:02<00:01, 149.07it/s]Loading weights:  55%|█████▌    | 236/427 [00:02<00:01, 161.57it/s]Loading weights:  59%|█████▉    | 253/427 [00:02<00:01, 157.38it/s]Loading weights:  63%|██████▎   | 269/427 [00:02<00:01, 150.03it/s]Loading weights:  68%|██████▊   | 289/427 [00:02<00:00, 161.82it/s]Loading weights:  72%|███████▏  | 306/427 [00:02<00:00, 160.62it/s]Loading weights:  76%|███████▌  | 323/427 [00:02<00:00, 154.25it/s]Loading weights:  80%|███████▉  | 341/427 [00:02<00:00, 159.50it/s]Loading weights:  84%|████████▍ | 359/427 [00:02<00:00, 157.75it/s]Loading weights:  88%|████████▊ | 375/427 [00:03<00:00, 150.79it/s]Loading weights:  92%|█████████▏| 394/427 [00:03<00:00, 160.43it/s]Loading weights:  96%|█████████▋| 412/427 [00:03<00:00, 158.85it/s]Loading weights: 100%|██████████| 427/427 [00:03<00:00, 125.61it/s]
+/root/strata-project/src/strata_trainer.py:377: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(dtype=torch.bfloat16):
+/root/strata-project/src/strata_trainer.py:387: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(dtype=torch.bfloat16):
+Setup complete!
+
+>>> Starting training...
+Starting StraTA training: 2 steps, N=2, M=2, sigma=2
+Model: /root/strata-project/model
+Training data: 4 tasks
+Traceback (most recent call last):
+  File "/root/strata-project/src/smoke_test.py", line 51, in <module>
+    main()
+  File "/root/strata-project/src/smoke_test.py", line 44, in main
+    trainer.train(train_tasks, eval_tasks)
+  File "/root/strata-project/src/strata_trainer.py", line 584, in train
+    metrics = self.training_step(batch)
+  File "/root/strata-project/src/strata_trainer.py", line 485, in training_step
+    lp = self.compute_log_prob(full_ids, target_ids.to(self.device))
+  File "/root/strata-project/src/strata_trainer.py", line 378, in compute_log_prob
+    outputs = self.model(input_ids=input_ids)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/peft/peft_model.py", line 1993, in forward
+    return self.base_model(
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/peft/tuners/tuners_utils.py", line 330, in forward
+    return self.model.forward(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/transformers/utils/generic.py", line 907, in wrapper
+    output = func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1678, in forward
+    logits = self.lm_head(hidden_states[:, slice_indices, :])
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.89 GiB. GPU 0 has a total capacity of 47.37 GiB of which 1.21 GiB is free. Including non-PyTorch memory, this process has 46.15 GiB memory in use. Of the allocated memory 45.63 GiB is allocated by PyTorch, and 72.95 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
