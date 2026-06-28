@@ -223,12 +223,18 @@ def compute_advantages(rewards: List[float]) -> List[float]:
 # 5. Utility Functions
 # ============================================================
 def extract_tag(text: str, tag: str) -> Optional[str]:
-    """Extract content between <tag>...</tag>"""
-    start = text.find(f"<{tag}>")
-    end = text.find(f"</{tag}>")
-    if start == -1 or end == -1:
+    """Extract content between <tag>...</tag>. If the closing tag is missing
+    (generation truncated mid-action), fall back to everything after <tag>."""
+    open_tag = f"<{tag}>"
+    close_tag = f"</{tag}>"
+    start = text.find(open_tag)
+    if start == -1:
         return None
-    return text[start + len(f"<{tag}>"):end].strip()
+    start += len(open_tag)
+    end = text.find(close_tag, start)
+    if end == -1:
+        return text[start:].strip()
+    return text[start:end].strip()
 
 
 def parse_judgment(text: str) -> List[int]:
@@ -431,7 +437,7 @@ class StraTATrainer:
             current_state=current_state,
             recent_history=history
         )
-        response = self.generate(prompt, max_new_tokens=256)
+        response = self.generate(prompt, max_new_tokens=1024)
         action = extract_tag(response, "action")
         token_count = len(self.tokenizer.encode(response))
         is_valid = action is not None
