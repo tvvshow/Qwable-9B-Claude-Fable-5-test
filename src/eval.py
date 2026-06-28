@@ -2,10 +2,12 @@
 """Quick eval: success-rate + format-validity on CodeGym eval tasks.
 Usage: eval.py [--adapter PATH] [--n 10] [--max-steps 6]
 """
-import sys, json, argparse
-sys.path.insert(0, "/root/strata-project/src")
+import os, sys, json, argparse
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from strata_trainer import StraTAConfig, StraTATrainer, extract_tag, augment_description
 from sandbox import CodeGym
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 def main():
@@ -13,7 +15,7 @@ def main():
     ap.add_argument("--adapter", default=None, help="LoRA adapter dir (omit = base model)")
     ap.add_argument("--n", type=int, default=10)
     ap.add_argument("--max-steps", type=int, default=6)
-    ap.add_argument("--data", default="/root/strata-project/data/eval/eval_tasks.json")
+    ap.add_argument("--data", default=os.path.join(ROOT, "data/eval/eval_tasks.json"))
     args = ap.parse_args()
 
     cfg = StraTAConfig(init_adapter=args.adapter, max_interaction_steps=args.max_steps,
@@ -21,7 +23,7 @@ def main():
     trainer = StraTATrainer(cfg)
     trainer.setup()
 
-    with open(args.data) as f:
+    with open(args.data if os.path.isabs(args.data) else os.path.join(ROOT, args.data)) as f:
         tasks = json.load(f)[: args.n]
 
     succ, fmt_ok, fmt_total = 0, 0, 0

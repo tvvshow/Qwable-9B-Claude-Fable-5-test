@@ -3,7 +3,7 @@ StraTA: Strategic Trajectory Abstraction for Agentic RL
 Core training framework adapted for code tasks.
 Based on: arXiv:2605.06642
 
-Memory-optimized for single RTX 4090 (48GB) + 9B model QLoRA 4-bit.
+Memory-optimized for a single ~48GB GPU + 9B model (bf16 LoRA).
 Key optimizations:
 - No reference model (use KL approximation instead)
 - Two-pass training: no_grad collection + incremental gradient computation
@@ -23,6 +23,11 @@ from dataclasses import dataclass, field
 from sentence_transformers import SentenceTransformer
 
 
+# Project root = parent of this src/ directory. Resolving default paths against it
+# lets the trainer run from any working directory on any clone location.
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
 # ============================================================
 # 1. Configuration
 # ============================================================
@@ -30,7 +35,7 @@ from sentence_transformers import SentenceTransformer
 class StraTAConfig:
     """StraTA training configuration - tuned for single RTX 4090 (48GB) + Qwable-9B"""
     # Model
-    model_path: str = "/root/strata-project/model"
+    model_path: str = os.path.join(ROOT, "model")
     embedding_model: str = "all-MiniLM-L6-v2"
     load_4bit: bool = False   # 48GB box: bf16 LoRA is faster & avoids bnb dequant overhead
     init_adapter: Optional[str] = None   # SFT LoRA adapter to warm-start RL from
@@ -64,10 +69,10 @@ class StraTAConfig:
     max_response_tokens: int = 512
 
     # Paths
-    checkpoint_dir: str = "/root/strata-project/checkpoints"
-    data_dir: str = "/root/strata-project/data"
-    eval_dir: str = "/root/strata-project/evals"
-    log_dir: str = "/root/strata-project/logs"
+    checkpoint_dir: str = os.path.join(ROOT, "checkpoints")
+    data_dir: str = os.path.join(ROOT, "data")
+    eval_dir: str = os.path.join(ROOT, "data", "eval")
+    log_dir: str = os.path.join(ROOT, "logs")
 
 
 # ============================================================
@@ -983,19 +988,26 @@ def main():
     parser.add_argument("--eval-data", type=str, default=None, help="Eval data JSON")
     args = parser.parse_args()
 
+    def _resolve(p):
+        """Resolve a relative path against the project root; leave absolute/None as-is."""
+        return p if (p is None or os.path.isabs(p)) else os.path.join(ROOT, p)
+
     config = StraTAConfig()
     if args.config:
-        with open(args.config) as f:
+        with open(_resolve(args.config)) as f:
             overrides = json.load(f)
         for k, v in overrides.items():
             if hasattr(config, k):
                 setattr(config, k, v)
+    # Resolve any relative config paths (e.g. init_adapter from JSON) against the root.
+    for _attr in ("model_path", "checkpoint_dir", "data_dir", "eval_dir", "log_dir", "init_adapter"):
+        setattr(config, _attr, _resolve(getattr(config, _attr, None)))
 
-    with open(args.train_data) as f:
+    with open(_resolve(args.train_data)) as f:
         train_data = json.load(f)
     eval_data = None
     if args.eval_data:
-        with open(args.eval_data) as f:
+        with open(_resolve(args.eval_data)) as f:
             eval_data = json.load(f)
 
     trainer = StraTATrainer(config)

@@ -1,0 +1,28 @@
+# StraTA personal reproduction — dependency versions pinned from the reference box
+# (Ubuntu 22.04, Python 3.10.12, NVIDIA CUDA 12.4).
+#
+# Step 1 — install torch matching YOUR CUDA (reference box uses CUDA 12.4):
+#     pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+# Step 2 — install the rest:
+#     pip install -r requirements.txt
+#
+# The base model (Qwable-9B) uses a hybrid Gated-DeltaNet linear-attention architecture.
+# For the FAST generation kernels (~5-7x speedup) ALSO build these against your torch+CUDA:
+#     pip install flash-linear-attention==0.5.1
+#     pip install causal-conv1d          # build from source if no wheel matches
+# If those fail to compile, the model still runs via a torch fallback — just slower.
+
+torch==2.6.0
+transformers==5.12.1
+peft==0.19.1
+trl==1.7.0
+accelerate==1.14.0
+datasets==5.0.0
+numpy==2.2.6
+sentence-transformers==5.6.0   # FPS diverse-strategy selection (strata_trainer.py)
+einops==0.8.2
+safetensors==0.8.0
+tokenizers==0.22.2
+huggingface_hub==1.21.0
+bitsandbytes==0.49.2           # optional — only needed for the load_4bit QLoRA path
+flash-linear-attention==0.5.1  # fast kernels for the custom linear-attention arch

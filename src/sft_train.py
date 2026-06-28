@@ -10,15 +10,16 @@ Chat-templated prompt + assistant-only loss. Output: LoRA adapter at checkpoints
 import os, json, random, argparse, math
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 import sys
-sys.path.insert(0, "/root/strata-project/src")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import LoraConfig, get_peft_model
 from strata_trainer import STRATEGY_PROMPT, ACTION_PROMPT, extract_tag
 
-MODEL = "/root/strata-project/model"
-SFT_DATA = "/root/strata-project/data/train/sft_data.json"
-OUT = "/root/strata-project/checkpoints/sft"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+MODEL = os.path.join(ROOT, "model")
+SFT_DATA = os.path.join(ROOT, "data/train/sft_data.json")
+OUT = os.path.join(ROOT, "checkpoints/sft")
 MAXLEN = 3072
 DEFAULT_CTX = "Empty project directory."
 

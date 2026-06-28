@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-import sys
-sys.path.insert(0, "/root/strata-project/src")
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 print("Step 1: imports OK")
 from strata_trainer import StraTAConfig, StraTATrainer
 print("Step 2: creating config...")

@@ -303,7 +303,8 @@ def create_sft_data(output_path: str, n_samples: int = 300):
 
 
 def main():
-    data_dir = "/root/strata-project/data"
+    data_dir = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
     os.makedirs(f"{data_dir}/train", exist_ok=True)
     os.makedirs(f"{data_dir}/eval", exist_ok=True)
 

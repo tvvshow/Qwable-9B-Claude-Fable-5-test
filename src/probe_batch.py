@@ -2,12 +2,13 @@
 """Probe: does batched (left-padded) generation + num_return_sequences work on
 the custom Qwable hybrid-linear-attention arch? If yes, we can batch rollouts to
 use idle VRAM and massively cut wall-clock. Prints per-call timing + VRAM."""
-import sys, time
-sys.path.insert(0, "/root/strata-project/src")
+import os, sys, time
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-M = "/root/strata-project/model"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+M = os.path.join(ROOT, "model")
 tok = AutoTokenizer.from_pretrained(M, trust_remote_code=True)
 if tok.pad_token is None:
     tok.pad_token = tok.eos_token

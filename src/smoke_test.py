@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """Quick smoke test: run 2 steps of StraTA training to verify the pipeline."""
-import sys
-sys.path.insert(0, '/root/strata-project/src')
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import json
 import torch
 from strata_trainer import StraTAConfig, StraTATrainer
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def main():
     print("=" * 60)
@@ -13,7 +15,7 @@ def main():
     print("=" * 60)
 
     config = StraTAConfig(
-        model_path="/root/strata-project/model",
+        model_path=os.path.join(ROOT, "model"),
         N=2,
         M=2,
         sigma=2,
@@ -23,7 +25,7 @@ def main():
         kappa=0.0,  # disable self-judgment for smoke test
     )
 
-    with open("/root/strata-project/data/train/synthetic.json") as f:
+    with open(os.path.join(ROOT, "data/train/synthetic.json")) as f:
         all_tasks = json.load(f)
     train_tasks = all_tasks[:4]
     eval_tasks = all_tasks[:2]

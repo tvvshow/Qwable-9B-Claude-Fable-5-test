@@ -3,10 +3,12 @@
 Tests whether exposing the test_command lets the model target the right module
 (e.g. solution.py) and run the test. Usage: eval_hint.py [--adapter P] [--n N] [--max-steps M]
 """
-import sys, json, argparse
-sys.path.insert(0, "/root/strata-project/src")
+import os, sys, json, argparse
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from strata_trainer import StraTAConfig, StraTATrainer
 from sandbox import CodeGym
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 HINT = (
     "\n\n[验证协议] 你的代码将通过以下命令自动验证，必须让它通过：\n"
@@ -27,7 +29,7 @@ def main():
     ap.add_argument("--adapter", default=None)
     ap.add_argument("--n", type=int, default=8)
     ap.add_argument("--max-steps", type=int, default=6)
-    ap.add_argument("--data", default="/root/strata-project/data/eval/eval_small.json")
+    ap.add_argument("--data", default=os.path.join(ROOT, "data/eval/eval_small.json"))
     args = ap.parse_args()
 
     cfg = StraTAConfig(init_adapter=args.adapter, max_interaction_steps=args.max_steps,
@@ -35,7 +37,7 @@ def main():
     trainer = StraTATrainer(cfg)
     trainer.setup()
 
-    with open(args.data) as f:
+    with open(args.data if os.path.isabs(args.data) else os.path.join(ROOT, args.data)) as f:
         tasks = json.load(f)[: args.n]
 
     succ, fmt_ok, fmt_total = 0, 0, 0
