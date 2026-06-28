@@ -947,10 +947,8 @@ class StraTATrainer:
             env = CodeGym(task, max_steps=self.config.max_interaction_steps)
             obs = env.reset()
             for step in range(self.config.max_interaction_steps):
-                history = "\n".join([
-                    f"Step {i+1}: {a}"
-                    for a in env.last_actions[-5:]
-                ]) if hasattr(env, 'last_actions') else ""
+                last = list(getattr(env, "last_actions", []))[-5:]
+                history = "\n".join(f"Step {i+1}: {a}" for i, a in enumerate(last))
                 action, _, _ = self.generate_action(
                     augment_description(task), strategy, obs, history
                 )
